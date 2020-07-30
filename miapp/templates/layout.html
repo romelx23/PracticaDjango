@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%block title%}
+        {%endblock%}
+        | Django Romel
+    </title>
+    {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+</head>
+<body>
+    <header>
+        <div class="contenedor-logo" id='logotipo'>
+            <img src="{% static 'images/logoDJango.png' %}" alt="">
+            <h1>Proyecto Web(LP3)</h1>
+        </div>
+    </header>
+    <nav class="nav nav-bar">
+        <ul>
+            <li>
+                <a href ="/inicio">Inicio</a>
+            </li>
+            <li>
+                <a href ="/saludo">Mensaje de saludo</a>
+            </li>
+            <li>
+                <a href ="/rango">Mensaje del Rango</a>
+            </li>
+            <li>
+                <a href ="/rango2/0/100">Mensaje del Rango2</a>
+            </li>
+        </ul>
+        
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    
+        <div class="" id="content">
+            <div class="box">
+                <h1>Proyecto Web(LP3) | Carrasco Mallma</h1>
+                {% block content %}
+            <strong>Contenido en Layout(Padre)</strong>
+            {% endblock %}
+            </div>
+            
+        </div>
+        <footer>
+            Untels -Lenguaje de Programación III &COPY; Carrasco Mallma
+        </footer>
+
+</body>
+</html>
